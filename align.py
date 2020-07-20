@@ -168,8 +168,6 @@ def save_img(path, img):
 def face_alignment():
     img = load_img('ok.png')
     mode = 0
-    #img = rotation_detection_opencv(img, 1 , show = False)
 
-    #else:
     img = rotation_detection_dlib(img, 0 , show = False)
     save_img('align.png', img)
