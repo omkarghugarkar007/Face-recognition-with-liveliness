@@ -165,9 +165,12 @@ def save_img(path, img):
     cv2.imwrite(path, img)
 
 
-def face_alignment():
-    img = load_img('ok.png')
-    mode = 0
+def face_alignment(path_original_image,save_path):
 
+    img = load_img(path_original_image)
+    mode = 0
+    #img = rotation_detection_opencv(img, 1 , show = False)
+
+    #else:
     img = rotation_detection_dlib(img, 0 , show = False)
-    save_img('align.png', img)
+    save_img(save_path, img)
