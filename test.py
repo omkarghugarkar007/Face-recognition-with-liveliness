@@ -14,10 +14,10 @@ BASE_DIR = "Final_images"
 Names = ['Angelina_Jolie','Anuj_Ghugarkar','Bill_Gates','David_Beckham','Jackie_Chan','Omkar_Ghugarkar','Serena_Williams','Tiger_Woods','Tom_Cruise']
 save_path1 = 'Final_Align_images'
 save_path2 = 'Final_faces'
-count = 0
-for name in Names:
-  image_dir = os.path.join(BASE_DIR, name)
-  for root, dirs, files in os.walk(image_dir):
+count = 81
+name = 'Unknown'
+image_dir = os.path.join(BASE_DIR, name)
+for root, dirs, files in os.walk(image_dir):
     for file in files:
       path_original = os.path.join(root, file)
       align_save = os.path.join(save_path1,str(count))
